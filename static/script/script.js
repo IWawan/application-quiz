@@ -107,6 +107,10 @@ function startQuiz()
 function showQuestion()
 {
   const questionData = questions[currentQuestionIndex];
+
+  // Afficher le numéro de la question actuelle sur le total
+  document.getElementById("current-question-number").textContent = currentQuestionIndex + 1;
+  document.getElementById("total-questions-number").textContent = questions.length;
   
   questionEl.innerHTML = questionData.question;
   answersContainer.innerHTML = "";
@@ -193,8 +197,9 @@ function displayVideoQuestion(questionData)
   video.controls = false;
   video.autoplay = true;
   video.width = 400;
+  video.style.margin = "auto";
   video.style.borderRadius = "12px";
-  document.getElementById("quiz-screen").insertBefore(video, answersContainer);
+  questionEl.appendChild(video);
   displayQCMQuestion(questionData);  
   video.play();
 }
@@ -207,14 +212,14 @@ function displayImage(questionData)
   image.id = "image";
 
   image.style.display = "block";
-  image.style.margin = "20px auto";
+  image.style.margin = "auto";
   image.style.borderRadius = "12px";
   image.style.maxWidth = "80%";  
   image.style.maxHeight = "400px";  
   image.style.minWidth = "300px";   
   image.style.objectFit = "contain";
   
-  document.getElementById("quiz-screen").insertBefore(image, answersContainer);
+  questionEl.appendChild(image);
 }
 
 function displayImageQCM(questionData)

@@ -155,7 +155,7 @@ button:hover
   font-weight: bold;
   color: var(--color-text-1);
   margin-bottom: 20px;
-  min-height: 130px;
+  min-height: 140px;
 }
 
 /* Boutons navigation */
@@ -280,6 +280,34 @@ button:hover
 .total-answers-label
 {
   color: var(--color-wrong);
+}
+
+/* Numéro de la question */
+#question-number
+{
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--color-button);
+  background-color: var(--color-text-background);
+  padding: 10px;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#question-number span
+{
+  color: var(--color-correct)
+}
+
+/* Enoncé de la question */
+#question
+{
+  font-size: 2em;
+  font-weight: normal;
+  margin-bottom: 30px;
+  align-items: center;
 }
 
 /* Animations */

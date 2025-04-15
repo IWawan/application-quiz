@@ -15,13 +15,17 @@
     <p>Choisissez un thème :</p>
     <div id="theme-list">
       <button onclick="loadTheme('culture_generale_1')">🧠 Culture générale #1</button>
-      <button onclick="loadTheme('musique_1')">🎵 Musique #1</button>
+      <button onclick="loadTheme('culture_generale_2')">🧠 Culture générale #2</button>
+      <button onclick="loadTheme('musique_1')">🎵 Musique</button>
     </div>
     <input type="file" id="xlsx-input" accept=".xlsx" style="display: none;" />
     <label for="xlsx-input" class="file-upload-btn">📥 Choisir un fichier Excel</label>
   </div>
 
   <div class="container" id="quiz-screen" style="display: none;">
+    <div id="question-number">
+      Question <span id="current-question-number">1</span> sur <span id="total-questions-number">1</span>
+    </div>
     <div id="question">Question ici</div>
     <div id="answers"></div>
     <div id="answer-message-container">
