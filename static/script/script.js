@@ -97,10 +97,11 @@ function startQuiz()
 {
   backBtn.style.display = "inline-block";
   skipBtn.style.display = "inline-block";
+  nextBtn.textContent = "Question suivante ➡";
   document.getElementById("start-screen").style.display = "none";
   document.getElementById("quiz-screen").style.display = "block";
   currentQuestionIndex = 0;
-  nbCorrectAnswers = 0
+  nbCorrectAnswers = 0;
   showQuestion();
 }
 
@@ -170,7 +171,7 @@ function displayQCMQuestion(questionData)
 
 function displayTrueFalseQuestion(questionData)
 {
-  document.getElementById("question").innerHTML = "<span class='true-label'>Vrai</span> ou <span class='false-label'>Faux</span> ? <br>" + questionData.question;
+  questionEl.innerHTML = "<span class='true-label'>Vrai</span> ou <span class='false-label'>Faux</span> ? <br>" + questionData.question;
 
   // Création du bouton "Vrai"
   const btn_true = document.createElement("button");
@@ -224,14 +225,14 @@ function displayImage(questionData)
 
 function displayImageQCM(questionData)
 {
+  displayQCMQuestion(questionData); 
   displayImage(questionData)
-  displayQCMQuestion(questionData);  
 }
 
 function displayImageTrueFalse(questionData)
 {
-  displayImage(questionData)
   displayTrueFalseQuestion(questionData);  
+  displayImage(questionData)
 }
 
 function displayImageMemoQuestion(questionData)
@@ -381,7 +382,7 @@ function checkTrueFalseAnswer(selectedIndex, correctIndex)
 
 function goToNextQuestion()
 {
-  nextBtn.style.display = "none"; // Cacher le bouton
+  nextBtn.style.display = "none";
   messageContainer.style.display = "none";
   explanationContainer.style.display = "none";
 
@@ -395,6 +396,11 @@ function goToNextQuestion()
 
   if (currentQuestionIndex < questions.length)
   {
+    if (currentQuestionIndex === questions.length - 1)
+    {
+      nextBtn.textContent = "Résultats ➡";
+    }
+
     showQuestion();
   }
   else
@@ -402,7 +408,7 @@ function goToNextQuestion()
     const totalQuestions = questions.length;
     const percentage = Math.round((nbCorrectAnswers / totalQuestions) * 100);
 
-    document.getElementById("question").innerHTML =
+    questionEl.innerHTML =
     `
       ${END_QUIZ_MESSAGE}<br><br>
       Vous avez eu 

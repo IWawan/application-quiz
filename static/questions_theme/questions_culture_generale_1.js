@@ -59,11 +59,12 @@ window.loadedQuestions =
         explanation: "Un hexagone a 6 côtés."
     },
     {
-        type: "qcm",
+        type: "image-qcm",
         question: "Qui a peint la Joconde ?",
         answers: ["Picasso", "Van Gogh", "Monet", "Léonard de Vinci"],
         correct: 3,
-        explanation: "La Joconde a été peinte par Léonard de Vinci au 16ème siècle."
+        explanation: "La Joconde a été peinte par Léonard de Vinci au 16ème siècle.",
+        resource: "/resources/joconde.jpg"
     },
     {
         type: "qcm",
@@ -73,11 +74,12 @@ window.loadedQuestions =
         explanation: "Il y a 8 planètes depuis que Pluton a été reclassée en planète naine."
     },
     {
-        type: "qcm",
+        type: "image-qcm",
         question: "Quel est le pays d'origine du fromage Roquefort ?",
         answers: ["France", "Italie", "Suisse", "Belgique"],
         correct: 0,
-        explanation: "Le Roquefort est un fromage français à base de lait de brebis."
+        explanation: "Le Roquefort est un fromage français à base de lait de brebis.",
+        resource: "/resources/roquefort.jpg"
     },
     {
         type: "qcm",
@@ -101,11 +103,12 @@ window.loadedQuestions =
         explanation: "Le Yen est la monnaie officielle du Japon."
     },
     {
-        type: "qcm",
+        type: "image-qcm",
         question: "Qui a inventé le téléphone ?",
         answers: ["Bell", "Edison", "Tesla", "Newton"],
         correct: 0,
-        explanation: "Alexander Graham Bell a inventé le téléphone en 1876."
+        explanation: "Alexander Graham Bell a inventé le téléphone en 1876.",
+        resource: "/resources/telephone.jpg"
     },
     {
         type: "qcm",
@@ -136,11 +139,12 @@ window.loadedQuestions =
         explanation: "Le kangourou est emblématique de l'Australie et figure sur son blason."
     },
     {
-        type: "qcm",
+        type: "image-qcm",
         question: "Dans quel pays se trouve la Tour de Pise ?",
         answers: ["Italie", "Espagne", "France", "Grèce"],
         correct: 0,
-        explanation: "La Tour de Pise se trouve en Italie, dans la ville de Pise."
+        explanation: "La Tour de Pise se trouve en Italie, dans la ville de Pise.",
+        resource: "/resources/tour_pise.jpg"
     },
     {
         type: "qcm",
@@ -164,11 +168,12 @@ window.loadedQuestions =
         explanation: "Il y a 7 continents : Afrique, Amérique du Nord, Amérique du Sud, Antarctique, Asie, Europe, Océanie."
     },
     {
-        type: "qcm",
+        type: "image-qcm",
         question: "Dans quel pays trouve-t-on les pyramides de Gizeh ?",
         answers: ["Mexique", "Grèce", "Égypte", "Inde"],
         correct: 2,
-        explanation: "Les pyramides de Gizeh se trouvent en Égypte."
+        explanation: "Les pyramides de Gizeh se trouvent en Égypte.",
+        resource: "/resources/pyramides.jpg"
     },
     {
         type: "qcm",
