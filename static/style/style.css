@@ -1,4 +1,5 @@
-:root {
+:root
+{
   --color-background: #f9f9f9;
   --color-button: #0056b3;
   --color-button-hover: #003d80;
@@ -15,7 +16,8 @@
 }
 
 /* Global */
-body {
+body
+{
   font-family: Arial, sans-serif;
   background-color: var(--color-background);
   text-align: center;
@@ -23,7 +25,8 @@ body {
   line-height: 1.8;
 }
 
-.container {
+.container
+{
   max-width: 900px;
   margin: auto;
   padding: 20px;
@@ -34,23 +37,57 @@ body {
 }
 
 /* Titres */
-h1 {
+h1
+{
   font-size: 2.5em;
   margin-bottom: 30px;
   color: var(--color-text-1);
   text-shadow: 2px 2px 4px #ccc;
 }
 
-/* Texte thème */
-#start-screen p {
+/* Écran de démarrage */
+#start-screen
+{
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#start-screen p
+{
+  animation: fadeIn 1.5s forwards;
   font-size: 1.6em;
   color: var(--color-text-2);
   font-weight: bold;
   margin-bottom: 25px;
 }
 
-/* Boutons */
-button {
+/* Bouton upload */
+.file-upload-btn
+{
+  display: inline-block;
+  font-size: 1.4em;
+  padding: 16px 32px;
+  margin: 10px;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--color-button-2);
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.file-upload-btn:hover
+{ 
+  background-color: var(--color-button-2-hover);
+  transform: scale(1.05);
+}
+
+/* Boutons généraux */
+button
+{
   font-size: 1.4em;
   padding: 18px 35px;
   margin: 10px;
@@ -62,68 +99,58 @@ button {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
+button:hover
+{ 
   background-color: var(--color-button-hover);
   transform: scale(1.05);
 }
 
-/* Bouton upload */
-.file-upload-btn {
-  display: inline-block;
-  font-size: 1.4em;
-  padding: 16px 32px;
-  margin: 10px;
-  border: none;
-  border-radius: 12px;
-  background-color: var(--color-button-2);
-  color: white;
-  cursor: pointer;
-  text-align: center;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.file-upload-btn:hover {
-  background-color: var(--color-button-2-hover);
-  transform: scale(1.05);
-}
-
 /* Réponses */
-#answers {
+#answers
+{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   grid-gap: 20px;
   margin-top: 10px;
   min-height: 150px;
+  justify-items: center;
 }
 
-.answer-btn {
+.answer-btn
+{
   min-height: max-content;
   width: 100%;
-  font-size: 1.3em;
+  max-width: 350px;
+  font-size: 1.7em;
   padding: 15px;
   border-radius: 12px;
 }
 
-.answer-btn.correct {
+.answer-btn.correct
+{
   background-color: var(--color-correct);
   animation: pulse-color-correct 2s infinite;
   box-shadow: 0 0 15px var(--color-correct);
 }
 
-.answer-btn.correct:hover {
+.answer-btn.correct:hover
+{ 
   background-color: var(--color-correct-hover);
 }
 
-.answer-btn.wrong {
+.answer-btn.wrong
+{
   background-color: var(--color-wrong);
 }
 
-.answer-btn.wrong:hover {
+.answer-btn.wrong:hover
+{ 
   background-color: var(--color-wrong-hover);
 }
 
 /* Question */
-#question {
+#question
+{
   font-size: 2em;
   font-weight: bold;
   color: var(--color-text-1);
@@ -131,58 +158,77 @@ button:hover {
   min-height: 130px;
 }
 
-/* Boutons spécifiques */
+/* Boutons navigation */
+#navigation-buttons
+{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#navigation-buttons .top-buttons
+{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 #back-to-menu-btn,
 #next-question-btn,
-#skip-question-btn {
-  display: inline-block;
+#skip-question-btn
+{
   font-size: 1.4em;
   padding: 16px 32px;
   border-radius: 12px;
-  margin: 10px auto 0 auto;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-#back-to-menu-btn {
+#back-to-menu-btn
+{
   background-color: var(--color-wrong);
 }
 
-#back-to-menu-btn:hover {
+#back-to-menu-btn:hover
+{ 
   background-color: var(--color-wrong-hover);
 }
 
-#next-question-btn {
+#next-question-btn
+{
   background-color: var(--color-correct);
   display: none;
 }
 
-#next-question-btn:hover {
+#next-question-btn:hover
+{ 
   background-color: var(--color-correct-hover);
 }
 
-#skip-question-btn {
+#skip-question-btn
+{
   background-color: var(--color-button-2);
   display: none;
 }
 
-#skip-question-btn:hover {
+#skip-question-btn:hover
+{ 
   background-color: var(--color-button-2-hover);
 }
 
-/* Alignement des boutons */
-#navigation-buttons {
-  margin-top: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-}
-
 /* Conteneurs */
-#answer-message-container {
+#answer-message-container
+{
   background-color: var(--color-text-background);
 }
 
-#message-container {
+#message-container
+{
   display: none;
   font-size: 1.6em;
   margin-top: 20px;
@@ -191,15 +237,18 @@ button:hover {
   font-weight: bold;
 }
 
-.correct-message {
+.correct-message
+{
   color: var(--color-correct);
 }
 
-.wrong-message {
+.wrong-message
+{
   color: var(--color-wrong);
 }
 
-#answer-explanation-container {
+#answer-explanation-container
+{
   display: none;
   font-size: 1.4em;
   line-height: 1.6;
@@ -213,50 +262,76 @@ button:hover {
 .false-label,
 .correct-answers-label,
 .total-answers-label,
-.percentage-label {
+.percentage-label
+{
   font-size: 1.2em;
   font-weight: bold;
+  margin-top: 10px;
 }
 
 .true-label,
 .correct-answers-label,
-.percentage-label {
+.percentage-label
+{
   color: var(--color-correct);
 }
 
 .false-label,
-.total-answers-label {
+.total-answers-label
+{
   color: var(--color-wrong);
 }
 
 /* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@keyframes fadeIn
+{
+  from
+  {
+    opacity: 0;
+  }
+  to
+  {
+    opacity: 1;
+  }
 }
 
-@keyframes pulse-color-correct {
-  0% { box-shadow: 0 0 25px var(--color-correct-effect); }
-  50% { box-shadow: 0 0 80px var(--color-correct-effect); }
-  100% { box-shadow: 0 0 25px var(--color-correct-effect); }
+@keyframes pulse-color-correct
+{
+  0%
+  {
+    box-shadow: 0 0 25px var(--color-correct-effect);
+  }
+  50%
+  {
+    box-shadow: 0 0 80px var(--color-correct-effect);
+  }
+  100%
+  {
+    box-shadow: 0 0 25px var(--color-correct-effect);
+  }
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
-  h1 {
+@media (max-width: 768px)
+{
+  h1
+  {
     font-size: 2em;
   }
 
-  #question {
+  #question
+  {
     font-size: 1.5em;
   }
 
-  button, .answer-btn {
+  button, .answer-btn
+  {
     font-size: 1.2em;
     padding: 14px 28px;
   }
 
-  #answers {
+  #answers
+  {
     grid-template-columns: 1fr;
   }
 }

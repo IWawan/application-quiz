@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/static/style/style.css">
   <script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js"></script>
 </head>
@@ -28,10 +29,12 @@
       <div id="answer-explanation-container"></div>
     </div>
     <div id="navigation-buttons">
-      <button id="back-to-menu-btn" onclick="backToMenu()">⬅ Retour au menu</button>
-      <button id="next-question-btn" onclick="goToNextQuestion()">Question suivante ➡</button>
-      <button id="skip-question-btn" onclick="goToNextQuestion()">Passer</button>
+      <div class="top-buttons">
+        <button id="back-to-menu-btn" onclick="backToMenu()">⬅ Retour au menu</button>
+        <button id="next-question-btn" onclick="goToNextQuestion()">Question suivante ➡</button>
+      </div>
     </div>
+    <button id="skip-question-btn" onclick="goToNextQuestion()">Passer</button>
   </div>
 
   <script src="/static/script/script.js"></script>
