@@ -1,0 +1,291 @@
+/* Variables */
+:root
+{
+  --color-background: #f2f6ff;
+  --color-button: #4683b4;
+  --color-button-hover: #4683b4c0;
+  --color-button-2: #db8402;
+  --color-button-2-hover: #db8402c0;
+  --color-correct: #4CAF50;
+  --color-correct-hover: #4caf4fc0;
+  --color-correct-effect: #91ff00c0;
+  --color-wrong: #f44336;
+  --color-wrong-hover: #f44336c0;
+  --color-text-1: #2c3e50;
+  --color-text-2: #3f3f3fc0;
+  --color-text-background: #71a0c74d;
+}
+
+/* Main */
+body
+{
+  font-family: Arial, sans-serif;
+  background-color: var(--color-background);
+  text-align: center;
+  padding: 10px;
+}
+
+.container
+{
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Titre principal */
+h1
+{
+  font-size: 3em;
+  margin-bottom: 40px;
+  color: var(--color-text-1);
+  text-shadow: 1px 1px 2px #ccc;
+}
+
+/* Choix du thème */
+#start-screen p {
+  font-size: 1.6em;
+  color: var(--color-text-2);
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Importation .xlsx */
+.file-upload-btn {
+  display: inline-block;
+  font-size: 1.5em;
+  padding: 20px 40px;
+  margin: 10px;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--color-button-2);
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+
+.file-upload-btn:hover {
+  background-color: var(--color-button-2-hover);
+}
+
+/* Conteneur de l'écran de démarrage avec animation */
+#start-screen {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Question */
+#question {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: var(--color-text-1);
+  margin-bottom: 20px;
+  min-height: 150px;
+}
+
+button
+{
+  font-size: 1.5em;
+  padding: 20px 40px;
+  margin: 10px;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--color-button);
+  color: white;
+  cursor: pointer;
+}
+
+button:hover
+{
+  background-color: var(--color-button-hover);
+}
+
+/* Boutons réponses */
+#answers
+{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin-top: 20px;
+  min-height: 200px;
+}
+
+.answer-btn
+{
+  display: block;
+  width: 100%;
+}
+
+.answer-btn.correct
+{
+  background-color: var(--color-correct);
+  box-shadow: 0 0 10px var(--color-correct);
+  transition: box-shadow 0.3s ease; 
+  animation: pulse-color-correct 2s infinite;
+}
+
+.answer-btn.correct:hover
+{
+  background-color: var(--color-correct-hover);
+}
+
+.answer-btn.wrong
+{
+  background-color: var(--color-wrong);
+}
+
+.answer-btn.wrong:hover
+{
+  background-color: var(--color-wrong-hover);
+}
+
+/* Bouton retour au menu */
+#back-to-menu-btn
+{
+  display: inline-block;
+  margin-top: 30px;
+  background-color: var(--color-wrong);
+}
+
+#back-to-menu-btn:hover
+{
+  background-color: var(--color-wrong-hover);
+}
+
+/* Bouton question suivante */
+#next-question-btn
+{
+  display: none;
+  margin-top: 30px;
+  background-color: var(--color-correct);
+}
+
+#next-question-btn:hover
+{
+  background-color: var(--color-correct-hover);
+}
+
+/* Bouton passer question */
+#skip-question-btn
+{
+  display: none;
+  margin-top: 30px;
+  background-color: var(--color-button-2);
+}
+
+#skip-question-btn:hover
+{
+  background-color: var(--color-button-2-hover);
+}
+
+/* Container à réponses et explications */
+#answer-message-container
+{
+  background-color: var(--color-text-background);
+}
+
+/* Message de bonne ou mauvaise réponse */
+#message-container
+{
+  display: none; 
+  font-size: 1.6em;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.correct-message
+{
+  color: var(--color-correct);
+}
+
+.wrong-message
+{
+  color: var(--color-wrong);  
+}
+
+/* Explication de la réponse */
+#answer-explanation-container
+{
+  display: none;
+  font-size: 1.3em;
+  line-height: 1.6;
+  color: var(--color-text-1);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.true-label
+{
+  color: var(--color-correct);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.false-label
+{
+  color: var(--color-wrong);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.correct-answers-label
+{
+  color: var(--color-correct);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.total-answers-label
+{
+  color: var(--color-wrong);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.percentage-label
+{
+  color: var(--color-correct);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Animation pour faire apparaître l'écran de démarrage */
+@keyframes fadeIn
+{
+  from
+  {
+    opacity: 0;
+  }
+  to
+  {
+    opacity: 1;
+  }
+}
+
+/* Effets d'animation */
+@keyframes pulse-color-correct
+{
+  0%
+  {
+    box-shadow: 0 0 20px var(--color-correct-effect);
+  }
+  50%
+  {
+    box-shadow: 0 0 70px var(--color-correct-effect);
+  }
+  100%
+  {
+    box-shadow: 0 0 20px var(--color-correct-effect);
+  }
+}

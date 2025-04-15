@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="/static/style/style.css">
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js"></script>
+</head>
+
+<body>
+  <div class="container" id="start-screen">
+    <h1>Bienvenue au Quiz !</h1>
+    <p>Choisissez un thème :</p>
+    <div id="theme-list">
+      <button onclick="loadTheme('culture_generale_1')">🧠 Culture générale #1</button>
+      <button onclick="loadTheme('musique_1')">🎵 Musique #1</button>
+    </div>
+    <input type="file" id="xlsx-input" accept=".xlsx" style="display: none;" />
+    <label for="xlsx-input" class="file-upload-btn">📥 Choisir un fichier Excel</label>
+  </div>
+
+  <div class="container" id="quiz-screen" style="display: none;">
+    <div id="question">Question ici</div>
+    <div id="answers"></div>
+    <div id="answer-message-container">
+      <div id="message-container"></div>
+      <div id="answer-explanation-container"></div>
+    </div>
+    <div>
+      <button id="back-to-menu-btn" onclick="backToMenu()">⬅ Retour au menu</button>
+      <button id="next-question-btn" onclick="goToNextQuestion()">Question suivante ➡</button>
+    </div>
+    <button id="skip-question-btn" onclick="goToNextQuestion()">Passer</button>
+  </div>
+
+  <script src="/static/script/script.js"></script>
+</body>
+
+</html>
