@@ -4,8 +4,8 @@ const WRONG_ANSWER_MESSAGE = "Mauvaise réponse :("
 const END_QUIZ_MESSAGE = "Fin du quiz ! Bravo !"
 
 /* Constantes des sons */
-const CORRECT_ANSWER_SOUND = new Audio('/static/audio/correct_answer_sound.mp3');
-const WRONG_ANSWER_SOUND = new Audio('/static/audio/wrong_answer_sound.mp3');
+//const CORRECT_ANSWER_SOUND = new Audio('/static/audio/correct_answer_sound.mp3');
+//const WRONG_ANSWER_SOUND = new Audio('/static/audio/wrong_answer_sound.mp3');
 
 /* Constantes des éléments */
 const xlsxInput = document.getElementById("xlsx-input");
@@ -274,14 +274,20 @@ function checkQCMAnswer(selectedIndex)
 
   if (selectedIndex === questionData.correct)
   {
+    // Bonne réponse 
+    //CORRECT_ANSWER_SOUND.play()
+    log.log("Bonne réponse !");
     nbCorrectAnswers++;
-    CORRECT_ANSWER_SOUND.play()
-
+    
     messageContainer.textContent = CORRECT_ANSWER_MESSAGE;
     messageContainer.className = "correct-message";
   }
   else
   {
+    // Mauvaise réponse 
+    //WRONG_ANSWER_SOUND.play()
+    log.log("Mauvaise réponse !");
+
     messageContainer.textContent = WRONG_ANSWER_MESSAGE;
     messageContainer.className = "wrong-message";
   }
@@ -308,7 +314,7 @@ function checkTrueFalseAnswer(selectedIndex, correctIndex)
     // Appliquer les classes de style en fonction de la bonne ou mauvaise réponse
     if (selectedIndex === correctIndex) // Si la réponse est correcte
     {
-      // Appliquer le classe "correct"
+      // Appliquer la classe "correct"
       if (selectedIndex === 0) // "Vrai"
       { 
         trueBtn.classList.add("correct");
@@ -318,16 +324,17 @@ function checkTrueFalseAnswer(selectedIndex, correctIndex)
         falseBtn.classList.add("correct");
       }
 
+      // Bonne réponse 
+      //CORRECT_ANSWER_SOUND.play()
+      log.log("Bonne réponse !");
       nbCorrectAnswers++;
-      CORRECT_ANSWER_SOUND.play()
-
-      // Afficher le message de bonne réponse
+      
       messageContainer.textContent = CORRECT_ANSWER_MESSAGE;
-      messageContainer.className = "correct-message"; 
+      messageContainer.className = "correct-message";
     }
     else // Si la réponse est incorrecte
     {
-      // Appliquer le classe "wrong"
+      // Appliquer la classe "wrong"
       if (selectedIndex === 0) // "Vrai"
       {
         trueBtn.classList.add("wrong");
@@ -337,7 +344,7 @@ function checkTrueFalseAnswer(selectedIndex, correctIndex)
         falseBtn.classList.add("wrong");
       }
       
-      // Appliquer le classe "correct" sur le bon bouton afin de le changer de couleur
+      // Appliquer la classe "correct" sur le bon bouton afin de le changer de couleur
       if (correctIndex === 0) // Si la bonne réponse est "Vrai"
       { 
         trueBtn.classList.add("correct");
@@ -347,7 +354,10 @@ function checkTrueFalseAnswer(selectedIndex, correctIndex)
         falseBtn.classList.add("correct");
       }
 
-      // Afficher le message de mauvaise réponse
+      // Mauvaise réponse 
+      //WRONG_ANSWER_SOUND.play()
+      log.log("Mauvaise réponse !");
+
       messageContainer.textContent = WRONG_ANSWER_MESSAGE;
       messageContainer.className = "wrong-message";
     }
