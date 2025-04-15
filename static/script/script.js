@@ -113,9 +113,6 @@ function showQuestion()
 
   answerMessageContainer.style.display = "none";
 
-  console.log("Nombre de bonnes réponses : " + nbCorrectAnswers);
-  
-
   // Gestion de chaque type de question
   switch (questionData.type)
   {
@@ -276,7 +273,7 @@ function checkQCMAnswer(selectedIndex)
   {
     // Bonne réponse 
     //CORRECT_ANSWER_SOUND.play()
-    log.log("Bonne réponse !");
+    console.log("Bonne réponse !");
     nbCorrectAnswers++;
     
     messageContainer.textContent = CORRECT_ANSWER_MESSAGE;
@@ -286,7 +283,7 @@ function checkQCMAnswer(selectedIndex)
   {
     // Mauvaise réponse 
     //WRONG_ANSWER_SOUND.play()
-    log.log("Mauvaise réponse !");
+    console.log("Mauvaise réponse !");
 
     messageContainer.textContent = WRONG_ANSWER_MESSAGE;
     messageContainer.className = "wrong-message";
@@ -326,7 +323,7 @@ function checkTrueFalseAnswer(selectedIndex, correctIndex)
 
       // Bonne réponse 
       //CORRECT_ANSWER_SOUND.play()
-      log.log("Bonne réponse !");
+      console.log("Bonne réponse !");
       nbCorrectAnswers++;
       
       messageContainer.textContent = CORRECT_ANSWER_MESSAGE;
@@ -356,7 +353,7 @@ function checkTrueFalseAnswer(selectedIndex, correctIndex)
 
       // Mauvaise réponse 
       //WRONG_ANSWER_SOUND.play()
-      log.log("Mauvaise réponse !");
+      console.log("Mauvaise réponse !");
 
       messageContainer.textContent = WRONG_ANSWER_MESSAGE;
       messageContainer.className = "wrong-message";
