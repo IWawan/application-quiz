@@ -160,7 +160,7 @@ window.loadedQuestions =
     {
         type: "qcm",
         question: "Quel groupe est célèbre pour la chanson 'Hotel California' ?",
-        answers: ["The Eagles", "The Beatles", "The Rolling Stones", "Queen"],
+        answers: ["Eagles", "The Beatles", "The Rolling Stones", "Queen"],
         correct: 0,
         explanation: "'Hotel California' est un tube du groupe The Eagles, sorti en 1976."
     },

@@ -77,6 +77,7 @@ function loadQuestionsFromXLSX(file)
   reader.readAsArrayBuffer(file);
 }
 
+// Charge un thème préenregistré
 function loadTheme(theme)
 {
   const script = document.createElement("script");
@@ -93,6 +94,7 @@ function loadTheme(theme)
   backBtn.style.display="inline-block"
 }
 
+// Compmence le quiz
 function startQuiz()
 {
   backBtn.style.display = "inline-block";
@@ -105,6 +107,7 @@ function startQuiz()
   showQuestion();
 }
 
+// Affiche les questions
 function showQuestion()
 {
   const questionData = questions[currentQuestionIndex];
@@ -157,6 +160,7 @@ function showQuestion()
   }
 }  
 
+// Affiche les questions du QCM
 function displayQCMQuestion(questionData)
 {
   questionData.answers.forEach((answer, index) =>
@@ -169,6 +173,7 @@ function displayQCMQuestion(questionData)
   });
 }
 
+// Affiche les questions du Vrai ou Faux
 function displayTrueFalseQuestion(questionData)
 {
   questionEl.innerHTML = "<span class='true-label'>Vrai</span> ou <span class='false-label'>Faux</span> ? <br>" + questionData.question;
@@ -190,6 +195,7 @@ function displayTrueFalseQuestion(questionData)
   answersContainer.appendChild(btn_false);
 }
 
+// Affiche les questions de la vidéo
 function displayVideoQuestion(questionData)
 {
   const video = document.createElement("video");
@@ -205,6 +211,7 @@ function displayVideoQuestion(questionData)
   video.play();
 }
 
+// Affiche l'image
 function displayImage(questionData)
 {
   const image = document.createElement("img");
@@ -223,18 +230,21 @@ function displayImage(questionData)
   questionEl.appendChild(image);
 }
 
+// Affiche la question image QCM
 function displayImageQCM(questionData)
 {
   displayQCMQuestion(questionData); 
   displayImage(questionData)
 }
 
+// Affiche la question image Vrai ou Faux
 function displayImageTrueFalse(questionData)
 {
   displayTrueFalseQuestion(questionData);  
   displayImage(questionData)
 }
 
+// Affiche les questions du image memo
 function displayImageMemoQuestion(questionData)
 {
   questionEl.textContent = "Observez bien cette image";
@@ -252,9 +262,10 @@ function displayImageMemoQuestion(questionData)
 
     // Affiche les réponses
     displayQCMQuestion(questionData);
-  }, questionData.displayTime || 10000); // Valeur par défaut 10s
+  }, questionData.displayTime || 5000); // Valeur par défaut 5s
 }
 
+// Vérifie les réponses du QCM
 function checkQCMAnswer(selectedIndex)
 {
   const questionData = questions[currentQuestionIndex];
@@ -295,8 +306,6 @@ function checkQCMAnswer(selectedIndex)
     messageContainer.className = "wrong-message";
   }
 
-  
-
   // Affiche l'explication de la réponse
   explanationContainer.textContent = questionData.explanation;
 
@@ -308,6 +317,7 @@ function checkQCMAnswer(selectedIndex)
   nextBtn.style.display = "inline-block";
 }
 
+// Vérifie les réponses du Vrai ou Faux
 function checkTrueFalseAnswer(selectedIndex, correctIndex)
 {
   const questionData = questions[currentQuestionIndex];
@@ -380,6 +390,7 @@ function checkTrueFalseAnswer(selectedIndex, correctIndex)
   nextBtn.style.display = "inline-block";
 }
 
+// Question suivante
 function goToNextQuestion()
 {
   nextBtn.style.display = "none";
@@ -427,6 +438,7 @@ function goToNextQuestion()
   }
 }
   
+// Retourne au menu
 function backToMenu()
 {
   document.getElementById("quiz-screen").style.display = "none";

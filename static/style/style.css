@@ -1,6 +1,7 @@
 :root
 {
   --color-background: #f9f9f9;
+  --color-title: #00a2e2;
   --color-button: #0056b3;
   --color-button-hover: #003d80;
   --color-button-2: #ff9900;
@@ -10,8 +11,8 @@
   --color-correct-effect: #91ff00c0;
   --color-wrong: #f44336;
   --color-wrong-hover: #d32f2f;
-  --color-text-1: #000000;
-  --color-text-2: #333333;
+  --color-text: #033447;
+  --color-highlight: #0f77a0;
   --color-text-background: #e0f7fa;
 }
 
@@ -39,9 +40,9 @@ body
 /* Titres */
 h1
 {
-  font-size: 2.5em;
+  font-size: 3.5em;
   margin-bottom: 30px;
-  color: var(--color-text-1);
+  color: var(--color-title);
   text-shadow: 2px 2px 4px #ccc;
 }
 
@@ -58,7 +59,7 @@ h1
 {
   animation: fadeIn 1.5s forwards;
   font-size: 1.6em;
-  color: var(--color-text-2);
+  color: var(--color-text);
   font-weight: bold;
   margin-bottom: 25px;
 }
@@ -148,14 +149,23 @@ button:hover
   background-color: var(--color-wrong-hover);
 }
 
-/* Question */
+/* Enoncé de la question */
 #question
 {
   font-size: 2em;
-  font-weight: bold;
-  color: var(--color-text-1);
-  margin-bottom: 20px;
+  color: var(--color-text);
+  font-weight: normal;
+  margin-bottom: 30px;
+  align-items: center;
   min-height: 190px;
+  text-align: center;
+}
+
+/* Texte accentué */
+.highlight
+{
+  color: var(--color-highlight);
+  font-weight: bold;
 }
 
 /* Boutons navigation */
@@ -252,7 +262,7 @@ button:hover
   display: none;
   font-size: 1.4em;
   line-height: 1.6;
-  color: var(--color-text-1);
+  color: var(--color-text);
   padding-bottom: 10px;
   border-radius: 12px;
 }
@@ -299,15 +309,6 @@ button:hover
 #question-number span
 {
   color: var(--color-correct)
-}
-
-/* Enoncé de la question */
-#question
-{
-  font-size: 2em;
-  font-weight: normal;
-  margin-bottom: 30px;
-  align-items: center;
 }
 
 /* Animations */
