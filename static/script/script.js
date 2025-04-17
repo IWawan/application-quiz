@@ -6,6 +6,7 @@ const END_QUIZ_MESSAGE = "Fin du quiz ! Bravo !"
 /* Constantes des sons */
 //const CORRECT_ANSWER_SOUND = new Audio('/static/audio/correct_answer_sound.mp3');
 //const WRONG_ANSWER_SOUND = new Audio('/static/audio/wrong_answer_sound.mp3');
+//const FIFTY_SOUND = new Audio('/static/audio/fifty_sound.mp3')
 
 /* Constantes des éléments */
 const xlsxInput = document.getElementById("xlsx-input");
@@ -17,6 +18,7 @@ const explanationContainer = document.getElementById("answer-explanation-contain
 const nextBtn = document.getElementById("next-question-btn");
 const backBtn = document.getElementById("back-to-menu-btn");
 const skipBtn = document.getElementById("skip-question-btn");
+const fiftyBtn = document.getElementById("fifty-btn");
 
 let questions = [];
 let currentQuestionIndex = 0;
@@ -104,6 +106,11 @@ function startQuiz()
   document.getElementById("quiz-screen").style.display = "block";
   currentQuestionIndex = 0;
   nbCorrectAnswers = 0;
+
+  // Cache le bouton 50/50
+  fiftyBtn.style.display = "none";
+  fiftyBtn.disabled = true;
+
   showQuestion();
 }
 
@@ -170,6 +177,13 @@ function displayQCMQuestion(questionData)
     btn.className = "answer-btn";
     btn.onclick = () => checkQCMAnswer(index);
     answersContainer.appendChild(btn);
+
+    // Affiche le bouton 50/50
+    fiftyBtn.style.display = "inline-block";
+    fiftyBtn.classList.remove("desactivated-btn");
+    fiftyBtn.classList.add("help-btn");
+    fiftyBtn.disabled = false;
+    fiftyBtn.onclick = () => fifty(questionData.correct); 
   });
 }
 
@@ -177,6 +191,10 @@ function displayQCMQuestion(questionData)
 function displayTrueFalseQuestion(questionData)
 {
   questionEl.innerHTML = "<span class='true-label'>Vrai</span> ou <span class='false-label'>Faux</span> ? <br>" + questionData.question;
+
+  // Cache le bouton 50/50
+  fiftyBtn.style.display = "none";
+  fiftyBtn.disabled = true;
 
   // Création du bouton "Vrai"
   const btn_true = document.createElement("button");
@@ -390,12 +408,40 @@ function checkTrueFalseAnswer(selectedIndex, correctIndex)
   nextBtn.style.display = "inline-block";
 }
 
+// Retire 2 réponses fausses
+function fifty(correctIndex)
+{
+  const buttons = Array.from(document.querySelectorAll(".answer-btn"));
+  const wrongButtons = buttons.filter((_, index) => index !== correctIndex);
+
+  // Mélange les mauvaises réponses et garde 2 à retirer
+  shuffleArray(wrongButtons).slice(0, 2).forEach(btn =>
+  {
+    btn.disabled = true;
+    btn.style.opacity = "0.3";
+    //btn.style.visibility = "hidden";
+  });
+
+  // Désactive le bouton
+  //CORRECT_ANSWER_SOUND.play()
+  console.log("50 / 50 !");
+
+  // Désactive le bouton
+  fiftyBtn.disabled = true;
+  fiftyBtn.classList.remove("help-btn");
+  fiftyBtn.classList.add("desactivated-btn");
+}
+
 // Question suivante
 function goToNextQuestion()
 {
   nextBtn.style.display = "none";
   messageContainer.style.display = "none";
   explanationContainer.style.display = "none";
+
+  // Cache le bouton 50/50
+  fiftyBtn.style.display = "none";
+  fiftyBtn.disabled = true;
 
   // Supprimer une ancienne vidéo ou image si présente
   const existingVideo = document.getElementById("video");

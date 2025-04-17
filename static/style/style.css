@@ -1,18 +1,20 @@
 :root
 {
   --color-background: #f9f9f9;
-  --color-title: #00a2e2;
-  --color-button: #0056b3;
-  --color-button-hover: #003d80;
-  --color-button-2: #ff9900;
-  --color-button-2-hover: #cc7a00;
+  --color-btn: #0056b3;
+  --color-btn-hover: #003d80;
+  --color-btn-2: #ff9900;
+  --color-btn-2-hover: #cc7a00;
+  --color-btn-3: #9a47ca;
+  --color-btn-3-hover: #651594;
+  --color-btn-desactivated: #414141;
   --color-correct: #4CAF50;
   --color-correct-hover: #3e8e41;
   --color-correct-effect: #91ff00c0;
   --color-wrong: #f44336;
   --color-wrong-hover: #d32f2f;
   --color-text: #033447;
-  --color-highlight: #0f77a0;
+  --color-highlight: #00a2e2;
   --color-text-background: #e0f7fa;
 }
 
@@ -42,7 +44,7 @@ h1
 {
   font-size: 3.5em;
   margin-bottom: 30px;
-  color: var(--color-title);
+  color: var(--color-highlight);
   text-shadow: 2px 2px 4px #ccc;
 }
 
@@ -73,7 +75,7 @@ h1
   margin: 10px;
   border: none;
   border-radius: 12px;
-  background-color: var(--color-button-2);
+  background-color: var(--color-btn-2);
   color: white;
   cursor: pointer;
   text-align: center;
@@ -82,7 +84,7 @@ h1
 
 .file-upload-btn:hover
 { 
-  background-color: var(--color-button-2-hover);
+  background-color: var(--color-btn-2-hover);
   transform: scale(1.05);
 }
 
@@ -94,7 +96,7 @@ button
   margin: 10px;
   border: none;
   border-radius: 12px;
-  background-color: var(--color-button);
+  background-color: var(--color-btn);
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -102,8 +104,31 @@ button
 
 button:hover
 { 
-  background-color: var(--color-button-hover);
+  background-color: var(--color-btn-hover);
   transform: scale(1.05);
+}
+
+/* Boutons aide */
+.help-btn
+{
+  background-color: var(--color-btn-3);
+}
+
+.help-btn:hover
+{ 
+  background-color: var(--color-btn-3-hover);
+  transform: scale(1.05);
+}
+
+.desactivated-btn
+{
+  background-color: var(--color-btn-desactivated);
+}
+
+.desactivated-btn:hover
+{
+  background-color: var(--color-btn-desactivated);
+  transform: none;
 }
 
 /* Réponses */
@@ -222,13 +247,13 @@ button:hover
 
 #skip-question-btn
 {
-  background-color: var(--color-button-2);
+  background-color: var(--color-btn-2);
   display: none;
 }
 
 #skip-question-btn:hover
 { 
-  background-color: var(--color-button-2-hover);
+  background-color: var(--color-btn-2-hover);
 }
 
 /* Conteneurs */
@@ -298,7 +323,7 @@ button:hover
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 20px;
-  color: var(--color-button);
+  color: var(--color-btn);
   background-color: var(--color-text-background);
   padding: 10px;
   border-radius: 8px;

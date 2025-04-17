@@ -58,7 +58,7 @@ window.loadedQuestions =
     },
     {
         type: "qcm",
-        question: "Complétez cette expression :<br><span class='highlight'>'Il n'y a pas de fumée sans...'</span>",
+        question: "Complétez cette expression :<br><span class='highlight'>'Il n'y a pas de fumée sans ...'</span>",
         answers: ["feu", "lumière", "bruit", "odeur"],
         correct: 0,
         explanation: "Cette expression signifie qu'il n'y a pas d'effet sans cause.",

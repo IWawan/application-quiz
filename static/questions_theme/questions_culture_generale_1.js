@@ -22,15 +22,6 @@ window.loadedQuestions =
         resource: "/resources/londres.jpg"
     },
     {
-        type: "image-memo",
-        question: "Quel animal n'était PAS présent sur la photo ?",
-        answers: ["Autruche", "Éléphant", "Zèbre", "Crododile"],
-        correct: 3,
-        explanation: "",
-        resource: "/resources/animaux_1.jpg",
-        duration_image_memo: 4
-    },
-    {
         type: "qcm",
         question: "Quel est le plus long fleuve d'Europe ?",
         answers: ["Seine", "Rhin", "Loire", "Danube"],
