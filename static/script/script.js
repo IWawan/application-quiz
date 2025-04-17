@@ -69,7 +69,6 @@ function loadQuestionsFromXLSX(file)
       correct: parseInt(q.Correcte) - 1,
       explanation: q.Explication || "",
       resource: q.Ressource ? `/resources/${q.Ressource}` : null,
-      displayTime: q.Durée_image_mémo ? parseInt(q.Durée_image_mémo * 1000) : undefined
     }));
 
     questions = shuffleArray(questions);
@@ -230,7 +229,7 @@ function displayVideoQuestion(questionData)
 }
 
 // Affiche l'image
-function displayImage(questionData)
+function displayImage(questionData, maxWidth, maxHeight)
 {
   const image = document.createElement("img");
   image.src = questionData.resource;
@@ -240,8 +239,8 @@ function displayImage(questionData)
   image.style.display = "block";
   image.style.margin = "auto";
   image.style.borderRadius = "12px";
-  image.style.maxWidth = "50%";  
-  image.style.maxHeight = "40%";   
+  image.style.maxWidth = maxWidth || "50%";  
+  image.style.maxHeight = maxHeight || "50%";
   image.style.objectFit = "contain";
   
   questionEl.appendChild(image);
@@ -267,9 +266,9 @@ function displayImageMemoQuestion(questionData)
   questionEl.textContent = "Observez bien cette image";
   answersContainer.innerHTML = "";
 
-  displayImage(questionData)
+  displayImage(questionData, "100%", "100%")
 
-  // Attendre
+  // Attendre 4 secondes avant d'afficher la question
   setTimeout(() =>
   {
     image.remove();
@@ -279,7 +278,7 @@ function displayImageMemoQuestion(questionData)
 
     // Affiche les réponses
     displayQCMQuestion(questionData);
-  }, questionData.displayTime || 5000); // Valeur par défaut 5s
+  }, 4000);
 }
 
 // Vérifie les réponses du QCM

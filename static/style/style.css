@@ -419,4 +419,16 @@ button:hover
   {
     grid-template-columns: 1fr;
   }
+  
+  /* Thèmes */
+  #theme-list
+  {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .theme-btn
+  {
+    min-width:50%;
+    font-size: 1em;
+  }
 }

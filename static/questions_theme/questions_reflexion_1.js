@@ -15,6 +15,5 @@ window.loadedQuestions =
         correct: 3,
         explanation: "",
         resource: "/resources/animaux_1.jpg",
-        duration_image_memo: 4
     },
 ];
