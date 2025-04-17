@@ -240,9 +240,8 @@ function displayImage(questionData)
   image.style.display = "block";
   image.style.margin = "auto";
   image.style.borderRadius = "12px";
-  image.style.maxWidth = "80%";  
-  image.style.maxHeight = "400px";  
-  image.style.minWidth = "300px";   
+  image.style.maxWidth = "50%";  
+  image.style.maxHeight = "40%";   
   image.style.objectFit = "contain";
   
   questionEl.appendChild(image);

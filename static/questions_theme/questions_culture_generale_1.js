@@ -14,12 +14,39 @@ window.loadedQuestions =
         explanation: ""
     },
     {
-        type: "image-qcm",
-        question: "Dans quel pays a été prise cette photo ?",
-        answers: ["Espagne", "France", "Angleterre", "Italie"],
-        correct: 2,
-        explanation: "Cette photo montre le Palais de Westminster, symbole de Londres en Angleterre.",
-        resource: "/resources/londres.jpg"
+        type: "image-vrai-faux",
+        question: "Les girafes vivent uniquement en Asie.",
+        correct: 1,
+        explanation: "C'est faux, elles vivent en Afrique.",
+        resource: "/resources/girafe.jpg"
+    },
+    {
+        type: "vrai-faux",
+        question: "L'eau bout à 100 degrés Celsius.",
+        correct: 0,
+        explanation: "",
+    },
+    {
+        type: "image-vrai-faux",
+        question: "Le Soleil est une planète.",
+        correct: 1,
+        explanation: "Non, c'est une étoile.",
+        resource: "/resources/soleil.jpg"
+
+    },
+    {
+        type: "image-vrai-faux",
+        question: "Les dauphins sont des mammifères.",
+        correct: 0,
+        explanation: "C'est vrai, ils allaitent leurs petits.",
+        resource: "/resources/dauphin.jpg"
+    },
+    {
+        type: "image-vrai-faux",
+        question: "La Lune produit sa propre lumière.",
+        correct: 1,
+        explanation: "Non, elle reflète la lumière du Soleil.",
+        resource: "/resources/lune.jpg"
     },
     {
         type: "qcm",
@@ -73,6 +100,26 @@ window.loadedQuestions =
         resource: "/resources/roquefort.jpg"
     },
     {
+        type: "vrai-faux",
+        question: "Le corps humain possède 206 os.",
+        correct: 0,
+        explanation: "C'est vrai, un adulte a en moyenne 206 os."
+    },
+    {
+        type: "image-vrai-faux",
+        question: "Les crocodiles peuvent vivre dans l'eau salée.",
+        correct: 0,
+        explanation: "C'est vrai, certaines espèces comme le crocodile marin vivent dans l'eau salée.",
+        resource: "/resources/crocodile.jpg"
+    },
+    {
+        type: "image-vrai-faux",
+        question: "Le chocolat blanc contient du cacao.",
+        correct: 1,
+        explanation: "Non, il contient du beurre de cacao, mais pas de cacao en poudre.",
+        resource: "/resources/chocolat_blanc.png"
+    },
+    {
         type: "qcm",
         question: "Qui a écrit 'Les Misérables' ?",
         answers: ["Émile Zola", "Victor Hugo", "Molière", "Voltaire"],
@@ -109,62 +156,18 @@ window.loadedQuestions =
         explanation: "Mars est appelée la planète rouge à cause de son sol riche en fer."
     },
     {
-        type: "qcm",
-        question: "Quel est le plus haut sommet du monde ?",
-        answers: ["K2", "Kilimandjaro", "Everest", "Mont Blanc"],
-        correct: 2,
-        explanation: "L'Everest culmine à 8849 mètres."
-    },
-    {
-        type: "qcm",
-        question: "Quel est le sport national du Japon ?",
-        answers: ["Karate", "Judo", "Baseball", "Sumo"],
-        correct: 3,
-        explanation: ""
-    },
-    {
-        type: "qcm",
-        question: "Quel est l'animal emblème de l'Australie ?",
-        answers: ["Kangourou", "Koala", "Émeu", "Dingo"],
+        type: "image-vrai-faux",
+        question: "Les abeilles fabriquent du miel.",
         correct: 0,
-        explanation: "Le kangourou est emblématique de l'Australie et figure sur son blason."
+        explanation: "C'est vrai, elles le produisent à partir du nectar des fleurs.",
+        resource: "/resources/abeille.jpg"
     },
     {
-        type: "image-qcm",
-        question: "Dans quel pays se trouve la Tour de Pise ?",
-        answers: ["Italie", "Espagne", "France", "Grèce"],
+        type: "image-vrai-faux",
+        question: "La Tour Eiffel a été construite pour l'Exposition universelle de 1889.",
         correct: 0,
-        explanation: "La Tour de Pise se trouve en Italie, dans la ville de Pise.",
-        resource: "/resources/tour_pise.jpg"
-    },
-    {
-        type: "qcm",
-        question: "Quelle est la plus grande planète du système solaire ?",
-        answers: ["Terre", "Mars", "Jupiter", "Neptune"],
-        correct: 2,
-        explanation: "Jupiter est la plus grande planète de notre système solaire."
-    },
-    {
-        type: "qcm",
-        question: "Qui a découvert la pénicilline ?",
-        answers: ["Pasteur", "Fleming", "Curie", "Newton"],
-        correct: 1,
-        explanation: "Alexander Fleming a découvert la pénicilline en 1928."
-    },
-    {
-        type: "qcm",
-        question: "Combien de continents existe-t-il sur Terre ?",
-        answers: ["5", "6", "8", "7"],
-        correct: 3,
-        explanation: "Il y a 7 continents : Afrique, Amérique du Nord, Amérique du Sud, Antarctique, Asie, Europe, Océanie."
-    },
-    {
-        type: "image-qcm",
-        question: "Dans quel pays trouve-t-on les pyramides de Gizeh ?",
-        answers: ["Mexique", "Grèce", "Égypte", "Inde"],
-        correct: 2,
-        explanation: "Les pyramides de Gizeh se trouvent en Égypte.",
-        resource: "/resources/pyramides.jpg"
+        explanation: "C'est vrai, elle a été inaugurée cette année-là à Paris.",
+        resource: "/resources/tour_eiffel.jpg"
     },
     {
         type: "qcm",

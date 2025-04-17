@@ -66,6 +66,23 @@ h1
   margin-bottom: 25px;
 }
 
+/* Thèmes */
+#theme-list
+{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+
+.theme-btn
+{
+  min-width:80%;
+  font-size: 1.2em;
+  white-space: normal;
+  word-wrap: break-word;
+  text-align: center;
+}
+
 /* Bouton upload */
 .file-upload-btn
 {
@@ -337,7 +354,7 @@ button:hover
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 20px;
-  color: var(--color-btn);
+  color: var(--color-text);
   background-color: var(--color-text-background);
   padding: 10px;
   border-radius: 8px;
@@ -347,7 +364,7 @@ button:hover
 
 #question-number span
 {
-  color: var(--color-correct)
+  color: var(--color-highlight)
 }
 
 /* Animations */
