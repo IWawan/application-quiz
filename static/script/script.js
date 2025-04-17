@@ -1,6 +1,6 @@
 /* Constantes des messages */
-const CORRECT_ANSWER_MESSAGE = "Bonne réponse :D"
-const WRONG_ANSWER_MESSAGE = "Mauvaise réponse :("
+const CORRECT_ANSWER_MESSAGE = "Bonne réponse 😄"
+const WRONG_ANSWER_MESSAGE = "Mauvaise réponse 😞"
 const END_QUIZ_MESSAGE = "Fin du quiz ! Bravo !"
 
 /* Constantes des sons */

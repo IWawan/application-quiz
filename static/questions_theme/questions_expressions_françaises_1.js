@@ -52,7 +52,7 @@ window.loadedQuestions =
     {
         type: "qcm",
         question: "Complétez cette expression :<br><span class='highlight'>'Petit à petit, ...'</span>",
-        answers: ["le chat devient grand", "le serpent se fait gros", "l'oiseau fait son nid", "le chien devient sage"],
+        answers: ["le chat devient grand", "le serpent se fait gros", "le chien devient sage", "l'oiseau fait son nid"],
         correct: 3,
         explanation: "Cette expression signifie qu'avec de la patience et de la persévérence on atteint son but.",
     },
@@ -80,7 +80,7 @@ window.loadedQuestions =
     {
         type: "qcm",
         question: "Complétez cette expression :<br><span class='highlight'>'Quand on parle du loup, on en voit ...'</span>",
-        answers: ["un autre", "un seul", "la queue", "deux"],
+        answers: ["un autre", "un seul", "deux", "la queue"],
         correct: 3,
         explanation: "Cette expression signifie qu'personne mentionnée dans une conversation apparaît précisément à ce moment-là",
     },

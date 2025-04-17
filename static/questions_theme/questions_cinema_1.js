@@ -23,11 +23,12 @@ window.loadedQuestions =
         resource: "/resources/amelie_poulain.mp4"
     },
     {
-        type: "qcm",
+        type: "image-qcm",
         question: "Quel réalisateur a dirigé 'Les Dents de la mer' ?",
         answers: ["Alfred Hitchcock", "James Cameron", "Steven Spielberg", "George Lucas"],
         correct: 2,
-        explanation: "'Les Dents de la mer' (Jaws) est un film culte de Steven Spielberg sorti en 1975."
+        explanation: "'Les Dents de la mer' (Jaws) est un film culte de Steven Spielberg sorti en 1975.",
+        resource: "/resources/les_dents_de_la_mer.jpg"
     },
     {
         type: "qcm",
@@ -68,5 +69,60 @@ window.loadedQuestions =
         question: "Le film 'Les Choristes' est sorti dans les années 60.",
         correct: 1,
         explanation: "Faux, il est sorti en 2004 mais évoque une époque plus ancienne, ce qui peut porter à confusion."
+    },
+    {
+        type: "image-vrai-faux",
+        question: "Jean Gabin a joué dans 'La Traversée de Paris'.",
+        correct: 0,
+        explanation: "C'est vrai, il partage l'affiche avec Bourvil dans ce film de Claude Autant-Lara sorti en 1956.",
+        resource: "/resources/jean_gabin.jpg"
+    },
+    {
+        type: "image-vrai-faux",
+        question: "Romy Schneider a joué le rôle de Sissi l'impératrice.",
+        correct: 0,
+        explanation: "C'est vrai, Romy Schneider a incarné l'impératrice Élisabeth d'Autriche dans la célèbre trilogie 'Sissi'.",
+        resource: "/resources/romy_schneider.jpg"
+    },
+    {
+        type: "qcm",
+        question: "Dans quel film retrouve-t-on la réplique : 'T'as de beaux yeux, tu sais' ?",
+        answers: ["Casablanca", "Le Quai des brumes", "Les Tontons flingueurs", "La Traversée de Paris"],
+        correct: 1,
+        explanation: "Cette réplique culte est dite par Jean Gabin à Michèle Morgan dans 'Le Quai des brumes' sorti en 1938."
+    },
+    {
+        type: "qcm",
+        question: "Qui a réalisé 'Le Fabuleux Destin d'Amélie Poulain' ?",
+        answers: ["Luc Besson", "Claude Lelouch", "Jean-Pierre Jeunet", "François Truffaut"],
+        correct: 2,
+        explanation: "'Amélie Poulain' est un film réalisé par Jean-Pierre Jeunet en 2001."
+    },
+    {
+        type: "vrai-faux",
+        question: "Le film 'Autant en emporte le vent' est une production française.",
+        correct: 1,
+        explanation: "Faux, il s'agit d'un film américain de 1939 avec Vivien Leigh et Clark Gable."
+    },
+    {
+        type: "image-vrai-faux",
+        question: "Catherine Deneuve a joué dans 'Peau d'Âne'.",
+        correct: 0,
+        explanation: "C'est vrai, elle incarne le rôle principal dans ce conte féerique réalisé par Jacques Demy.",
+        resource: "/resources/catherine_deneuve.jpg"
+    },
+    {
+        type: "qcm",
+        question: "Quel acteur incarne Fantômas dans les films des années 60 ?",
+        answers: ["Louis de Funès", "Michel Serrault", "Jean Rochefort", "Jean Marais"],
+        correct: 3,
+        explanation: "Jean Marais joue le double rôle de Fantômas et du journaliste Fandor, tandis que Louis de Funès joue le commissaire Juve."
+    },
+    {
+        type: "image-vrai-faux",
+        question: "Lino Ventura était d'origine italienne.",
+        correct: 0,
+        explanation: "C'est vrai, né en Italie, il a fait une grande carrière d'acteur en France, souvent dans des rôles de policiers ou de gangsters.",
+        resource: "/resources/lino_ventura.jpg"
     },
 ];
