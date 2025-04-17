@@ -3,10 +3,10 @@ window.loadedQuestions =
     {
         type: "image-qcm",
         question: "Trouvez l'intrus :",
-        answers: ["panier", "sac", "plat", "sceau"],
-        correct: 0,
+        answers: ["Cigogne", "Flamant rose", "Girafe", "Abeille"],
+        correct: 2,
         resource: "/resources/intrus_1.jpg",
-        explanation: "",
+        explanation: "La girafe est le seul animal de l'image qui n'est pas un oiseau.",
     },
     {
         type: "image-memo",

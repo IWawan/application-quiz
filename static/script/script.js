@@ -413,7 +413,7 @@ function checkTrueFalseAnswer(selectedIndex, correctIndex)
   nextBtn.style.display = "inline-block";
 }
 
-// Retire 2 réponses fausses
+// 50 / 50 : Retire 2 réponses fausses
 function fifty(correctIndex)
 {
   const buttons = Array.from(document.querySelectorAll(".answer-btn"));
