@@ -289,6 +289,11 @@ function checkQCMAnswer(selectedIndex)
   const questionData = questions[currentQuestionIndex];
   const buttons = document.querySelectorAll(".answer-btn");
 
+  // Désactive le bouton 50 / 50
+  fiftyBtn.disabled = true;
+  fiftyBtn.classList.remove("help-btn");
+  fiftyBtn.classList.add("desactivated-btn");
+
   buttons.forEach((btn, index) =>
   {
     if (index === questionData.correct)
@@ -418,8 +423,7 @@ function fifty(correctIndex)
   shuffleArray(wrongButtons).slice(0, 2).forEach(btn =>
   {
     btn.disabled = true;
-    btn.style.opacity = "0.3";
-    //btn.style.visibility = "hidden";
+    btn.classList.add("desactivated");
   });
 
   // Désactive le bouton

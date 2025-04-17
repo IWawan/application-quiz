@@ -1,8 +1,8 @@
 :root
 {
   --color-background: #f9f9f9;
-  --color-btn: #0056b3;
-  --color-btn-hover: #003d80;
+  --color-btn-1: #0056b3;
+  --color-btn-1-hover: #003d80;
   --color-btn-2: #ff9900;
   --color-btn-2-hover: #cc7a00;
   --color-btn-3: #9a47ca;
@@ -96,7 +96,7 @@ button
   margin: 10px;
   border: none;
   border-radius: 12px;
-  background-color: var(--color-btn);
+  background-color: var(--color-btn-1);
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -104,7 +104,7 @@ button
 
 button:hover
 { 
-  background-color: var(--color-btn-hover);
+  background-color: var(--color-btn-1-hover);
   transform: scale(1.05);
 }
 
@@ -122,6 +122,8 @@ button:hover
 
 .desactivated-btn
 {
+  opacity: 0.6;
+  cursor: not-allowed;
   background-color: var(--color-btn-desactivated);
 }
 
@@ -172,6 +174,18 @@ button:hover
 .answer-btn.wrong:hover
 { 
   background-color: var(--color-wrong-hover);
+}
+
+.answer-btn.desactivated
+{
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.answer-btn.desactivated:hover
+{
+  background-color: var(--color-btn-1);
+  transform: none;
 }
 
 /* Enoncé de la question */
