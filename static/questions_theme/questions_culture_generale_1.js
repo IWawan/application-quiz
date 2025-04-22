@@ -86,7 +86,7 @@ window.loadedQuestions =
     },
     {
         type: "qcm",
-        question: "Combien de planètes dans notre système solaire ?",
+        question: "Combien de planètes y a t-il dans notre système solaire ?",
         answers: ["7", "8", "9", "10"],
         correct: 1,
         explanation: "Il y a 8 planètes depuis que Pluton a été reclassée en planète naine."

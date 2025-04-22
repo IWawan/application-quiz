@@ -84,16 +84,18 @@ window.loadedQuestions =
         explanation: "Non, le Nil se trouve en Afrique."
     },
     {
-        type: "vrai-faux",
+        type: "image-vrai-faux",
         question: "Les chauves-souris sont aveugles.",
         correct: 1,
-        explanation: "C'est faux, elles voient mais utilisent aussi l'écholocation."
+        explanation: "C'est faux, elles voient mais utilisent aussi l'écholocation.",
+        resource: "/resources/chauve_souris.jpg"
     },
     {
-        type: "vrai-faux",
+        type: "image-vrai-faux",
         question: "La Joconde se trouve au musée du Louvre.",
         correct: 0,
-        explanation: "C'est vrai, elle y est exposée depuis des siècles."
+        explanation: "C'est vrai, elle y est exposée depuis des siècles.",
+        resource: "/resources/joconde.jpg"
     },
     {
         type: "image-vrai-faux",
@@ -129,10 +131,11 @@ window.loadedQuestions =
         explanation: "Non, ce sont des arachnides, elles ont 8 pattes, pas 6."
     },
     {
-        type: "vrai-faux",
+        type: "image-vrai-faux",
         question: "La banane pousse sur un arbre.",
         correct: 1,
-        explanation: "Non, le bananier est une herbe géante, pas un arbre."
+        explanation: "Non, le bananier est une herbe géante, pas un arbre.",
+        resource: "/resources/banane.jpg"
     },
     {
         type: "vrai-faux",
@@ -141,10 +144,11 @@ window.loadedQuestions =
         explanation: "C'est faux, ils respirent grâce à leurs branchies."
     },
     {
-        type: "vrai-faux",
+        type: "image-vrai-faux",
         question: "Le mont Everest se trouve en Afrique.",
         correct: 1,
         explanation: "Non, il est situé en Asie, dans l'Himalaya.",
+        resource: "/resources/everest.jpg"
     },
     {
         type: "image-vrai-faux",

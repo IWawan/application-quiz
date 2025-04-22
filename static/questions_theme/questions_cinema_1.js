@@ -38,13 +38,6 @@ window.loadedQuestions =
         explanation: "Leonardo DiCaprio incarne Jack Dawson dans 'Titanic', réalisé par James Cameron."
     },
     {
-        type: "image-vrai-faux",
-        question: "Louis de Funès a joué dans le film 'La Grande Vadrouille'.",
-        correct: 0,
-        explanation: "C'est vrai, Louis de Funès partage l'affiche avec Bourvil dans ce grand classique de 1966.",
-        resource: "/resources/louis_de_funes.jpg"
-    },
-    {
         type: "qcm",
         question: "Qui joue dans 'Les Misérables' de 1958 ?",
         answers: ["Gérard Depardieu", "Jean Gabin", "Michel Galabru", "Jean Marais"],
