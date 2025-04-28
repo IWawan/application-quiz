@@ -1,6 +1,6 @@
 :root
 {
-  --color-background: #f9f9f9;
+  --color-bg: #92e0ff8c;
   --color-btn-1: #0056b3;
   --color-btn-1-hover: #003d80;
   --color-btn-2: #ff9900;
@@ -15,17 +15,17 @@
   --color-wrong-hover: #d32f2f;
   --color-text: #033447;
   --color-highlight: #00a2e2;
-  --color-text-background: #e0f7fa;
+  --color-text-bg: #e0f7fa;
 }
 
 /* Global */
 body
 {
   font-family: Arial, sans-serif;
-  background-color: var(--color-background);
+  background-color: var(--color-bg);
   text-align: center;
   padding: 20px;
-  line-height: 1.8;
+  line-height: 1.5;
 }
 
 .container
@@ -42,8 +42,7 @@ body
 /* Titres */
 h1
 {
-  font-size: 3.5em;
-  margin-bottom: 30px;
+  font-size: 3em;
   color: var(--color-highlight);
   text-shadow: 2px 2px 4px #ccc;
 }
@@ -54,7 +53,7 @@ h1
   opacity: 0;
   animation: fadeIn 1s forwards;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 #start-screen p
@@ -290,7 +289,7 @@ button:hover
 /* Conteneurs */
 #answer-message-container
 {
-  background-color: var(--color-text-background);
+  background-color: var(--color-text-bg);
 }
 
 #message-container
@@ -355,7 +354,7 @@ button:hover
   font-weight: bold;
   margin-bottom: 20px;
   color: var(--color-text);
-  background-color: var(--color-text-background);
+  background-color: var(--color-text-bg);
   padding: 10px;
   border-radius: 8px;
   display: inline-block;
