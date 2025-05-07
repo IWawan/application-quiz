@@ -16,6 +16,10 @@
   --color-text: #033447;
   --color-highlight: #00a2e2;
   --color-text-bg: #e0f7fa;
+
+  --font-size-small: 1.1em;
+  --font-size-medium: 1.3em;
+  --font-size-title: 2.5em;
 }
 
 /* Global */
@@ -42,7 +46,7 @@ body
 /* Titres */
 h1
 {
-  font-size: 3em;
+  font-size: var(--font-size-title);
   color: var(--color-highlight);
   text-shadow: 2px 2px 4px #ccc;
 }
@@ -59,7 +63,7 @@ h1
 #start-screen p
 {
   animation: fadeIn 1.5s forwards;
-  font-size: 1.6em;
+  font-size: var(--font-size-medium);
   color: var(--color-text);
   font-weight: bold;
   margin-bottom: 25px;
@@ -76,7 +80,7 @@ h1
 .theme-btn
 {
   min-width:80%;
-  font-size: 1.2em;
+  font-size: var(--font-size-small);
   white-space: normal;
   word-wrap: break-word;
   text-align: center;
@@ -86,7 +90,7 @@ h1
 .file-upload-btn
 {
   display: inline-block;
-  font-size: 1.4em;
+  font-size: var(--font-size-small);
   padding: 16px 32px;
   margin: 10px;
   border: none;
@@ -107,7 +111,7 @@ h1
 /* Boutons généraux */
 button
 {
-  font-size: 1.4em;
+  font-size: var(--font-size-small);
   padding: 18px 35px;
   margin: 10px;
   border: none;
@@ -156,7 +160,7 @@ button:hover
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   grid-gap: 10px;
   margin-top: 10px;
-  min-height: 150px;
+  min-height: 110px;
   justify-items: center;
 }
 
@@ -165,7 +169,7 @@ button:hover
   min-height: max-content;
   width: 100%;
   max-width: 350px;
-  font-size: 1.7em;
+  font-size: var(--font-size-medium);
   padding: 15px;
   border-radius: 12px;
 }
@@ -207,12 +211,11 @@ button:hover
 /* Enoncé de la question */
 #question
 {
-  font-size: 2em;
+  font-size: var(--font-size-medium);
   color: var(--color-text);
   font-weight: normal;
   margin-bottom: 30px;
   align-items: center;
-  min-height: 190px;
   text-align: center;
 }
 
@@ -245,7 +248,7 @@ button:hover
 #next-question-btn,
 #skip-question-btn
 {
-  font-size: 1.4em;
+  font-size: var(--font-size-small);
   padding: 16px 32px;
   border-radius: 12px;
   border: none;
@@ -295,7 +298,7 @@ button:hover
 #message-container
 {
   display: none;
-  font-size: 1.6em;
+  font-size: var(--font-size-medium);
   margin-top: 20px;
   padding-top: 10px;
   border-radius: 12px;
@@ -315,7 +318,7 @@ button:hover
 #answer-explanation-container
 {
   display: none;
-  font-size: 1.4em;
+  font-size: var(--font-size-medium);
   line-height: 1.6;
   color: var(--color-text);
   padding-bottom: 10px;
@@ -329,7 +332,7 @@ button:hover
 .total-answers-label,
 .percentage-label
 {
-  font-size: 1.2em;
+  font-size: var(--font-size-small);
   font-weight: bold;
   margin-top: 10px;
 }
@@ -350,7 +353,7 @@ button:hover
 /* Numéro de la question */
 #question-number
 {
-  font-size: 1.5em;
+  font-size: var(--font-size-medium);
   font-weight: bold;
   margin-bottom: 20px;
   color: var(--color-text);
@@ -398,6 +401,13 @@ button:hover
 /* Responsive design */
 @media (max-width: 768px)
 {
+  :root
+  {
+    --font-size-small: 0.7em;
+    --font-size-medium: 0.9em;
+    --font-size-title: 1.5em;
+  }
+
   h1
   {
     font-size: 2em;
@@ -410,7 +420,6 @@ button:hover
 
   button, .answer-btn
   {
-    font-size: 1.2em;
     padding: 14px 28px;
   }
 
@@ -428,6 +437,5 @@ button:hover
   .theme-btn
   {
     min-width: 0%;
-    font-size: 0.9em;
   }
 }

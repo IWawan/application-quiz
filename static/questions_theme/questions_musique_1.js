@@ -1,11 +1,10 @@
 window.loadedQuestions =
 [
     {
-        type: "image-vrai-faux",
+        type: "vrai-faux",
         question: "Johnny Hallyday a interprété 'La Vie en Rose'",
         correct: 1,
         explanation: "C'est faux, 'La Vie en Rose' a été interprétée par Édith Piaf en 1946.",
-        resource: "/resources/johnny_hallyday.jpg"
     },
     {
         type: "video",

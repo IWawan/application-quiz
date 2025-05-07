@@ -122,7 +122,7 @@ function showQuestion()
   document.getElementById("current-question-number").textContent = currentQuestionIndex + 1;
   document.getElementById("total-questions-number").textContent = questions.length;
   
-  questionEl.innerHTML = questionData.question;
+  questionEl.innerHTML = questionData.question + "<br>";
   answersContainer.innerHTML = "";
 
   answerMessageContainer.style.display = "none";
