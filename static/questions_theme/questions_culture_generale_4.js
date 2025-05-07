@@ -51,4 +51,51 @@ window.loadedQuestions =
         "explanation": "C'est vrai, le mont Kilimandjaro est situé en Tanzanie, en Afrique.",
         "resource": "/resources/kilimandjaro.jpg"
     },
+    {
+        "type": "qcm",
+        "question": "En quelle année le mur de Berlin est-il tombé ?.",
+        "correct": 2,
+        "answers": ["1975", "1983", "1989", "2001"],
+        "explanation": "Le mur de Berlin est tombé le 9 novembre 1989, marquant la fin de la guerre froide."
+    },
+    {
+        "type": "qcm",
+        "question": "Qui a tiré le coup de feu en 1914 qui a déclenché la Première Guerre mondiale ?",
+        "correct": 1,
+        "answers": ["Jean Jaurés", "L'archiduc François-Ferdinand", "Gavrilo Princip", "Le maréchal Pétain"],
+        "explanation": "Gavrilo Princip a tiré sur l'archiduc François-Ferdinand le 28 juin 1914, déclenchant la Première Guerre mondiale."
+    },
+    {
+        "type": "qcm",
+        "question": "Quelle est la capitale de l'Inde ?",
+        "correct": 0,
+        "answers": ["New Delhi", "Mumbai", "Bangalore", "Calcutta"],
+        "explanation": "New Delhi est la capitale de l'Inde depuis 1931."
+    },
+    {
+        "type": "qcm",
+        "question": "Où a-t-on enregistré la température la plus élevée jamais enregistrée sur Terre ?",
+        "correct": 2,
+        "answers": ["Désert de Gobi", "Désert de Sonora", "Vallée de la Mort", "Sahara"],
+        "explanation": "La Vallée de la Mort, en Californie, a enregistré 56,7 °C en 1913, la température la plus élevée jamais enregistrée sur Terre."
+    },
+    {
+        "type": "vrai-faux",
+        "question": "Le Canada et les États-Unis sont les deux pays qui ont la plus longue frontière internationale commune.",
+        "correct": 0,
+        "explanation": "C'est vrai, la frontière entre le Canada et les États-Unis mesure environ 8 891 km."
+    },
+    {
+        "type": "vrai-faux",
+        "question": "'Le Fantôme de l'Opéra' est le spectacle le plus ancien de Broadway",
+        "correct": 0,
+        "explanation": "C'est vrai, il est joué depuis 1988 et a finalement fermé ses portes en avril 2023 après un record de 13 981 représentations."
+    },
+    {
+        "type": "qcm",
+        "question": "Quel est le plus grand organe du corps humain ?",
+        "correct": 3,
+        "answers": ["Cerveau", "Cœur", "Foie", "Peau"],
+        "explanation": "La peau est le plus grand organe du corps humain, représentant environ 15% du poids corporel total."
+    }
 ];

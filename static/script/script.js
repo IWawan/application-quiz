@@ -239,8 +239,8 @@ function displayImage(questionData, maxWidth, maxHeight)
   image.style.display = "block";
   image.style.margin = "auto";
   image.style.borderRadius = "12px";
-  image.style.maxWidth = maxWidth || "50%";  
-  image.style.maxHeight = maxHeight || "50%";
+  image.style.maxWidth = maxWidth || "30%";  
+  image.style.maxHeight = maxHeight || "30%";
   image.style.objectFit = "contain";
   
   questionEl.appendChild(image);
