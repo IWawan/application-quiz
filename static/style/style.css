@@ -49,6 +49,7 @@ h1
   font-size: var(--font-size-title);
   color: var(--color-highlight);
   text-shadow: 2px 2px 4px #ccc;
+  margin: 0;
 }
 
 /* Écran de démarrage */
@@ -66,7 +67,7 @@ h1
   font-size: var(--font-size-medium);
   color: var(--color-text);
   font-weight: bold;
-  margin-bottom: 25px;
+  margin: 10px;
 }
 
 /* Thèmes */
@@ -437,5 +438,16 @@ button:hover
   .theme-btn
   {
     min-width: 0%;
+  }
+}
+
+/* === TABLETTE EN MODE PAYSAGE === */
+@media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: landscape)
+{
+  :root
+  {
+    --font-size-small: 1em;
+    --font-size-medium: 1.2em;
+    --font-size-title: 1.7em;
   }
 }
