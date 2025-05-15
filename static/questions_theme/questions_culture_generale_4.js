@@ -97,5 +97,74 @@ window.loadedQuestions =
         "correct": 3,
         "answers": ["Cerveau", "Cœur", "Foie", "Peau"],
         "explanation": "La peau est le plus grand organe du corps humain, représentant environ 15% du poids corporel total."
-    }
+    },
+    {
+        type: "qcm",
+        question: "Quel est l'élément chimique dont le symbole est 'Fe' ?",
+        answers: ["Fer", "Fluor", "Francium", "Fermium"],
+        correct: 0,
+        explanation: ""
+    },
+    {
+        type: "qcm",
+        question: "Quel pays est le plus peuplé du monde ?",
+        answers: ["Inde", "États-Unis", "Chine", "Indonésie"],
+        correct: 2,
+        explanation: ""
+    },
+    {
+        type: "vrai-faux",
+        question: "La lumière voyage plus vite dans l'eau que dans le vide.",
+        correct: 1,
+        explanation: ""
+    },
+    {
+        type: "qcm",
+        question: "Quel gaz est principalement responsable de l'effet de serre ?",
+        answers: ["Oxygène", "Dioxyde de carbone", "Azote", "Hydrogène"],
+        correct: 1,
+        explanation: "Le dioxyde de carbone est un gaz à effet de serre majeur."
+    },
+    {
+        type: "qcm",
+        question: "En quelle année, la Vème République est entrée en vigueur ?",
+        answers: ["1878", "1905", "1958", "1962"],
+        correct: 2,
+        explanation: ""
+    },
+    {
+        type: "qcm",
+        question: "Quel arbre produit le liège ?",
+        answers: ["Le cèdre", "L'eucalyptus", "Le charme", "Le chêne"],
+        correct: 3,
+        explanation: ""
+    },
+    {
+        type: "qcm",
+        question: "Qui a écrit Le Petit Prince ?",
+        answers: ["Charles Baudelaire", "Antoine de Saint-Exupéry", "Gustave Flaubert", "Simone de Beauvoir"],
+        correct: 1,
+        explanation: "Le Petit Prince est un roman français écrit par Antoine de Saint-Exupéry et publié en 1943, il s'agit du livre le plus traduit au monde après la Bible."
+    },
+    {
+        type: "qcm",
+        question: "Qui a écrit L'Étranger ?",
+        answers: ["Alexandre Dumas", "Honoré de Balzac", "Victor Hugo", "Albert Camus"],
+        correct: 3,
+        explanation: "L'Étranger est le premier roman publié d'Albert Camus, paru en 1942."
+    },
+    {
+        type: "qcm",
+        question: "De quel pays la ville de Stockholm est la capitale ?",
+        answers: ["Danemark", "Finlande", "Suède", "Norvège"],
+        correct: 2,
+        explanation: ""
+    },
+    {
+        type: "qcm",
+        question: "De quel animal la nymphe est-elle le petit ?",
+        answers: ["Papillon", "Cigale", "Serin", "Abeille"],
+        correct: 0,
+        explanation: ""
+    },
 ];
