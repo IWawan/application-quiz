@@ -79,7 +79,7 @@ h1
 
 .theme-btn
 {
-  min-width: 90%;
+  width: 100%;
   padding: 15px;
   white-space: normal;
   word-wrap: break-word;
