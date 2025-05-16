@@ -3,7 +3,7 @@
   "short_name": "Quiz",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#92e0ff8c",
+  "background_color": "#92e0ff",
   "theme_color": "#0056b3",
   "description": "Application de quiz en ligne",
   "icons": [
