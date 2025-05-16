@@ -36,7 +36,7 @@ body
 {
   max-width: 900px;
   margin: auto;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 12px;
   background-color: white;
@@ -58,7 +58,6 @@ h1
   opacity: 0;
   animation: fadeIn 1s forwards;
   text-align: center;
-  margin-top: 20px;
 }
 
 #start-screen p
@@ -67,7 +66,7 @@ h1
   font-size: var(--font-size-medium);
   color: var(--color-text);
   font-weight: bold;
-  margin: 10px;
+  margin: 5px;
 }
 
 /* Thèmes */
@@ -81,7 +80,7 @@ h1
 .theme-btn
 {
   min-width:80%;
-  font-size: var(--font-size-small);
+  padding: 15px;
   white-space: normal;
   word-wrap: break-word;
   text-align: center;
@@ -230,7 +229,7 @@ button:hover
 /* Boutons navigation */
 #navigation-buttons
 {
-  margin-top: 40px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -437,18 +436,18 @@ button:hover
 {
   :root
   {
-    --font-size-small: 1em;
-    --font-size-medium: 1.3em;
-    --font-size-title: 1.7em;
+    --font-size-small: 0.9em;
+    --font-size-medium: 1.2em;
+    --font-size-title: 1.6em;
+  }
+
+  body
+  {
+    padding: 10px;
   }
 
   #answers
   {
     min-height: 70px;
-  }
-
-  .theme-btn
-  {
-    min-width: 0%;
   }
 }
