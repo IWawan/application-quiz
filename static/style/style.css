@@ -79,7 +79,7 @@ h1
 
 .theme-btn
 {
-  width: 100%;
+  width: 90%;
   padding: 15px;
   white-space: normal;
   word-wrap: break-word;
@@ -167,10 +167,10 @@ button:hover
 .answer-btn
 {
   min-height: max-content;
-  width: 100%;
+  width: 95%;
   max-width: 350px;
   font-size: var(--font-size-medium);
-  padding: 15px;
+  padding: 5px;
   border-radius: 12px;
 }
 
@@ -229,24 +229,15 @@ button:hover
 /* Boutons navigation */
 #navigation-buttons
 {
-  margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-}
-
-#navigation-buttons .top-buttons
-{
-  display: flex;
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-#back-to-menu-btn,
-#next-question-btn,
-#skip-question-btn
+#navigation-buttons button
 {
   font-size: var(--font-size-small);
   padding: 16px 32px;
@@ -255,6 +246,17 @@ button:hover
   cursor: pointer;
   color: white;
   transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#navigation-buttons .top-buttons
+{
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+#navigation-buttons .top-buttons #fifty-btn
+{
+  margin-right: 10vw;
 }
 
 #back-to-menu-btn
