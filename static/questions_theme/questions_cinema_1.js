@@ -15,14 +15,6 @@ window.loadedQuestions =
         resource: "/resources/marilyn_monroe.jpg"
     },
     {
-        type: "video",
-        question: "Quel est le nom de ce film ?",
-        answers: ["La La Land", "La Môme", "Intouchables", "Le Fabuleux Destin d'Amélie Poulain"],
-        correct: 3,
-        explanation: "'Le Fabuleux Destin d'Amélie Poulain' est un film français réalisé par Jean-Pierre Jeunet en 2001.",
-        resource: "/resources/amelie_poulain.mp4"
-    },
-    {
         type: "image-qcm",
         question: "Quel réalisateur a dirigé 'Les Dents de la mer' ?",
         answers: ["Alfred Hitchcock", "James Cameron", "Steven Spielberg", "George Lucas"],

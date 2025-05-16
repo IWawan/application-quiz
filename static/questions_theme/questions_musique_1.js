@@ -8,7 +8,7 @@ window.loadedQuestions =
     },
     {
         type: "video",
-        question: "Quelle est le nom de cette chanson ?",
+        question: "Quel est le nom de cette chanson ?",
         answers: ["La Vie en Rose", "La Bohème", "L'Aventurier", "L'Oiseau et l'Enfant"],
         correct: 3,
         explanation: "'L'Oiseau et l'Enfant' est une chanson interprétée par Marie Myriam, gagnante de l'Eurovision 1977 pour la France.",

@@ -172,5 +172,5 @@ window.loadedQuestions =
         correct: 0,
         explanation: "La Tour de Pise se trouve en Italie, dans la ville de Pise.",
         resource: "/resources/tour_pise.jpg"
-    },
+    }
 ];

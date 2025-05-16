@@ -21,7 +21,7 @@ window.loadedQuestions =
         question: "Quel pays est surnommé le pays du soleil levant ?",
         answers: ["Chine", "Japon", "Egypte", "Australie"],
         correct: 1,
-        explanation: "Le Japon est souvent appelé le pays du soleil levant en raison de sa position géographique à l'est de l'Asie.",
+        explanation: "Le Japon est souvent appelé le pays du soleil levant en raison de sa position géographique à l'est de l'Asie."
     },
     {
         type: "image-vrai-faux",
@@ -41,14 +41,14 @@ window.loadedQuestions =
         type: "vrai-faux",
         question: "Ludwig van Beethoven a composé la symphonie 'La Pastorale'.",
         correct: 0,
-        explanation: "",
+        explanation: ""
     },
     {
         type: "qcm",
         question: "Quel ville est surnommée 'La Ville Lumière?",
         answers: ["Paris", "Tokyo", "Las Vegas", "Rio de Janeiro"],
         correct: 0,
-        explanation: "Paris est surnommée 'La Ville Lumière' en raison de son rôle historique en tant que centre d'art et de culture.",
+        explanation: "Paris est surnommée 'La Ville Lumière' en raison de son rôle historique en tant que centre d'art et de culture."
     },
     {
         type: "image-qcm",
@@ -118,7 +118,7 @@ window.loadedQuestions =
         question: "Quel est l'instrument utilisé pour mesurer la pression atmosphérique?",
         answers: ["Baromètre", "Altimètre", "Thermomètre", "Chronomètre"],
         correct: 0,
-        explanation: "",
+        explanation: ""
     },
     {
         type: "qcm",
@@ -175,6 +175,6 @@ window.loadedQuestions =
         question: "Quel est le plus grand océan du monde ?",
         answers: ["Atlantique", "Indien", "Arctique", "Pacifique"],
         correct: 3,
-        explanation: "",
+        explanation: ""
     }
 ];

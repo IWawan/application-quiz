@@ -24,7 +24,7 @@ window.loadedQuestions =
         type: "vrai-faux",
         question: "L'eau bout à 100 degrés Celsius.",
         correct: 0,
-        explanation: "",
+        explanation: ""
     },
     {
         type: "image-vrai-faux",
