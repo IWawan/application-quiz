@@ -39,14 +39,32 @@ function shuffleArray(array)
 /* ============ Import XLSX ============ */
 if (xlsxInput)
 {
-  xlsxInput.addEventListener("change", function (e)
+  xlsxInput.addEventListener("change", async function (e)
   {
     const file = e.target.files[0];
 
     if (file)
     {
+      // Charge SheetJS dynamiquement si nécessaire
+      if (typeof XLSX === "undefined")
+      {
+        await loadSheetJS();
+      }
+
       loadQuestionsFromXLSX(file);
     }
+  });
+}
+
+async function loadSheetJS()
+{
+  return new Promise((resolve, reject) =>
+  {
+    const script = document.createElement("script");
+    script.src = "https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js";
+    script.onload = resolve;
+    script.onerror = reject;
+    document.head.appendChild(script);
   });
 }
 

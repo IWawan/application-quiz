@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <title>Quiz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0056b3">
+  <link rel="manifest" href="/manifest.json">
   <link rel="stylesheet" href="/static/style/style.css">
-  <link rel="icon" href="static/icons/favicon.ico" type="image/favicon-icon" />
-  <script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js"></script>
+  <link rel="icon" href="static/icons/favicon.ico" type="image/favicon-icon">
 </head>
 
 <body>
@@ -24,7 +25,7 @@
       <button class="theme-btn" onclick="loadTheme('culture_generale_3')">🧠<br>Culture générale #3</button>
       <button class="theme-btn" onclick="loadTheme('culture_generale_4')">🧠<br>Culture générale #4</button>
     </div>
-    <input type="file" id="xlsx-input" accept=".xlsx" style="display: none;" />
+    <input type="file" id="xlsx-input" accept=".xlsx" style="display: none;">
     <label for="xlsx-input" class="file-upload-btn">📥 Choisir un fichier Excel</label>
   </div>
 
@@ -48,7 +49,22 @@
     <button id="skip-question-btn" onclick="goToNextQuestion()">Passer</button>
   </div>
 
-  <script src="/static/script/script.js"></script>
+  <script src="/static/script/script.js" defer></script>
+
+  <script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("/sw.js")
+        .then(registration => {
+          console.log("Service Worker enregistré avec succès:", registration);
+        })
+        .catch(error => {
+          console.log("Erreur lors de l'enregistrement du Service Worker:", error);
+        });
+    });
+  }
+</script>
+
 </body>
 
 </html>
