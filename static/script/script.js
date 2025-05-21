@@ -4,9 +4,9 @@ const WRONG_ANSWER_MESSAGE = "Mauvaise réponse 😞"
 const END_QUIZ_MESSAGE = "Fin du quiz ! Bravo !"
 
 /* Constantes des sons */
-//const CORRECT_ANSWER_SOUND = new Audio('/static/audio/correct_answer_sound.mp3');
-//const WRONG_ANSWER_SOUND = new Audio('/static/audio/wrong_answer_sound.mp3');
-//const FIFTY_SOUND = new Audio('/static/audio/fifty_sound.mp3')
+const CORRECT_ANSWER_SOUND = new Audio('/static/audios/correct_answer_sound.mp3');
+const WRONG_ANSWER_SOUND = new Audio('/static/audios/wrong_answer_sound.mp3');
+const FIFTY_SOUND = new Audio('/static/audios/fifty_sound.mp3')
 
 /* Constantes des éléments */
 const xlsxInput = document.getElementById("xlsx-input");
@@ -328,8 +328,7 @@ function checkQCMAnswer(selectedIndex)
   if (selectedIndex === questionData.correct)
   {
     // Bonne réponse 
-    //CORRECT_ANSWER_SOUND.play()
-    console.log("Bonne réponse !");
+    CORRECT_ANSWER_SOUND.play()
     nbCorrectAnswers++;
     
     messageContainer.textContent = CORRECT_ANSWER_MESSAGE;
@@ -338,8 +337,7 @@ function checkQCMAnswer(selectedIndex)
   else
   {
     // Mauvaise réponse 
-    //WRONG_ANSWER_SOUND.play()
-    console.log("Mauvaise réponse !");
+    WRONG_ANSWER_SOUND.play()
 
     messageContainer.textContent = WRONG_ANSWER_MESSAGE;
     messageContainer.className = "wrong-message";
@@ -377,8 +375,7 @@ function checkTrueFalseAnswer(selectedIndex, correctIndex)
       }
 
       // Bonne réponse 
-      //CORRECT_ANSWER_SOUND.play()
-      console.log("Bonne réponse !");
+      CORRECT_ANSWER_SOUND.play()
       nbCorrectAnswers++;
       
       messageContainer.textContent = CORRECT_ANSWER_MESSAGE;
@@ -407,8 +404,7 @@ function checkTrueFalseAnswer(selectedIndex, correctIndex)
       }
 
       // Mauvaise réponse 
-      //WRONG_ANSWER_SOUND.play()
-      console.log("Mauvaise réponse !");
+      WRONG_ANSWER_SOUND.play();
 
       messageContainer.textContent = WRONG_ANSWER_MESSAGE;
       messageContainer.className = "wrong-message";
@@ -442,9 +438,7 @@ function fifty(correctIndex)
     btn.classList.add("desactivated");
   });
 
-  // Désactive le bouton
-  //CORRECT_ANSWER_SOUND.play()
-  console.log("50 / 50 !");
+  FIFTY_SOUND.play()
 
   // Désactive le bouton
   fiftyBtn.disabled = true;
@@ -488,7 +482,7 @@ function goToNextQuestion()
     questionEl.innerHTML =
     `
       ${END_QUIZ_MESSAGE}<br><br>
-      Vous avez eu 
+      Vous avez obtenu 
       <span class="correct-answers-label">${nbCorrectAnswers}</span> 
       bonne${nbCorrectAnswers > 1 ? "s" : ""} réponse${nbCorrectAnswers > 1 ? "s" : ""} 
       sur 
