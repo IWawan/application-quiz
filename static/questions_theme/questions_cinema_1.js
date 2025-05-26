@@ -2,7 +2,7 @@ window.loadedQuestions =
 [
     {
         type: "image-vrai-faux",
-        question: "Louis de Funès a joué dans le film <br><span class='highlight'>'Le Visiteurs'</span>.",
+        question: "Louis de Funès a joué dans le film <br><span class='highlight'>'Les Visiteurs'</span>.",
         correct: 1,
         explanation: "Faux, 'Les Visiteurs' est une comédie avec Jean Reno et Christian Clavier, sortie en 1993.",
         resource: "/resources/louis_de_funes.jpg"
