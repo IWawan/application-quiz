@@ -30,8 +30,11 @@
   </div>
 
   <div class="container" id="quiz-screen" style="display: none;">
-    <div id="question-number">
-      Question <span id="current-question-number">1</span> sur <span id="total-questions-number">1</span>
+    <div id="header">
+      <div id="question-number">
+        Question <span id="current-question-number">1</span> sur <span id="total-questions-number">1</span>
+      </div>
+      <button id="skip-question-btn" onclick="goToNextQuestion()">Passer</button>
     </div>
     <div id="question">Question ici</div>
     <div id="answers"></div>

@@ -256,11 +256,6 @@ button:hover
   margin-top: 10px;
 }
 
-#navigation-buttons .top-buttons #fifty-btn
-{
-  margin-right: 10vw;
-}
-
 #back-to-menu-btn
 {
   background-color: var(--color-wrong);
@@ -286,6 +281,7 @@ button:hover
 {
   background-color: var(--color-btn-2);
   display: none;
+  margin-left: 50px;
 }
 
 #skip-question-btn:hover
@@ -453,5 +449,44 @@ button:hover
   #answers
   {
     min-height: 70px;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --font-size-small: 1.5em;
+    --font-size-medium: 2em;
+    --font-size-title: 3.5em;
+  }
+
+  .container {
+    padding: 60px;
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --font-size-small: 1.5em;
+    --font-size-medium: 2.5em;
+    --font-size-title: 3.5em;
+  }
+
+  .container {
+    padding: 60px;
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 1800px) {
+  :root {
+    --font-size-small: 1.8em;
+    --font-size-medium: 2.4em;
+    --font-size-title: 4.5em;
+  }
+
+  .container {
+    padding: 80px;
+    max-width: 60%;
   }
 }
