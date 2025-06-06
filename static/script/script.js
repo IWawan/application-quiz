@@ -98,7 +98,7 @@ function loadQuestionsFromXLSX(file)
 
 // Charge un thème
 async function loadTheme(name_file) {
-  const filePath = `../../questions_excel/${name_file}.xlsx`;
+  const filePath = `questions_excel/${name_file}.xlsx`;
 
   // Charger SheetJS dynamiquement si nécessaire
   if (typeof XLSX === "undefined") {
