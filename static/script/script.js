@@ -4,9 +4,9 @@ const WRONG_ANSWER_MESSAGE = "Mauvaise réponse 😞"
 const END_QUIZ_MESSAGE = "Fin du quiz ! Bravo !"
 
 /* Constantes des sons */
-const CORRECT_ANSWER_SOUND = new Audio('/static/audios/correct_answer_sound.mp3');
-const WRONG_ANSWER_SOUND = new Audio('/static/audios/wrong_answer_sound.mp3');
-const FIFTY_SOUND = new Audio('/static/audios/fifty_sound.mp3')
+const CORRECT_ANSWER_SOUND = new Audio('static/audios/correct_answer_sound.mp3');
+const WRONG_ANSWER_SOUND = new Audio('static/audios/wrong_answer_sound.mp3');
+const FIFTY_SOUND = new Audio('static/audios/fifty_sound.mp3')
 
 /* Constantes des éléments */
 const xlsxInput = document.getElementById("xlsx-input");
@@ -86,7 +86,7 @@ function loadQuestionsFromXLSX(file)
       answers: q.Réponses ? q.Réponses.split(",").map(r => r.trim()) : [],
       correct: parseInt(q.Correcte) - 1,
       explanation: q.Explication || "",
-      resource: q.Ressource ? `/resources/${q.Ressource}` : null,
+      resource: q.Ressource ? `resources/${q.Ressource}` : null,
     }));
 
     questions = shuffleArray(questions);
@@ -119,7 +119,7 @@ async function loadTheme(name_file) {
     answers: q.Réponses ? q.Réponses.split(",").map(r => r.trim()) : [],
     correct: parseInt(q.Correcte) - 1,
     explanation: q.Explication || "",
-    resource: q.Ressource ? `/resources/${q.Ressource}` : null,
+    resource: q.Ressource ? `resources/${q.Ressource}` : null,
   }));
 
   questions = shuffleArray(questions);
