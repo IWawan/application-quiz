@@ -1,12 +1,20 @@
 const CACHE_NAME = "quiz-cache-v5";
 const urlsToCache = [
-  "/",
-  "/index.html",
-  "/static/style/style.css",
-  "/static/script/script.js",
-  "/static/icons/favicon.ico",
-  "/static/icons/icon-192.png",
-  "/static/icons/icon-512.png",
+  '/',
+  '/index.html',
+  '/static/script/script.js',
+  '/static/style/style.css',
+  '/static/audios/correct_answer_sound.mp3',
+  '/static/audios/fifty_sound.mp3',
+  '/static/audios/wrong_answer_sound.mp3',
+  '/questions_excel/questions-anglais-1.xlsx',
+  '/questions_excel/questions-cinema-1.xlsx',
+  '/questions_excel/questions-culture_generale-1.xlsx',
+  '/questions_excel/questions-culture_generale-2.xlsx',
+  '/questions_excel/questions-culture_generale-3.xlsx',
+  '/questions_excel/questions-culture_generale-4.xlsx',
+  '/questions_excel/questions-expressions_francaises-1.xlsx',
+  '/questions_excel/questions-musique-1.xlsx',
   "https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js"
 ];
 

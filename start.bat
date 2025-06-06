@@ -1,0 +1,3 @@
+@echo off
+title Lancement du serveur local...
+python -m http.server 8080
