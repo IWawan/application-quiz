@@ -1,4 +1,4 @@
-const CACHE_NAME = "quiz-cache-v3";
+const CACHE_NAME = "quiz-cache-v5";
 const urlsToCache = [
   "/",
   "/index.html",
@@ -38,7 +38,15 @@ self.addEventListener("activate", event => {
 self.addEventListener("fetch", event => {
   event.respondWith(
     caches.match(event.request).then(response => {
-      return response || fetch(event.request);
+      if (response) {
+        return response;
+      }
+      return fetch(event.request).catch(() => {
+        return new Response("Erreur réseau ou ressource indisponible", {
+          status: 503,
+          statusText: "Service Unavailable"
+        });
+      });
     })
   );
 });

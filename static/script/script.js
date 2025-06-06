@@ -96,22 +96,36 @@ function loadQuestionsFromXLSX(file)
   reader.readAsArrayBuffer(file);
 }
 
-// Charge un thème préenregistré
-function loadTheme(theme)
-{
-  const script = document.createElement("script");
-  script.src = `../static/questions_theme/questions_${theme}.js`;
+// Charge un thème
+async function loadTheme(name_file) {
+  const filePath = `../../questions_excel/${name_file}.xlsx`;
 
-  script.onload = () =>
-  {
-    questions = window.loadedQuestions;
-    questions = shuffleArray(questions);
-    startQuiz();
-  };
+  // Charger SheetJS dynamiquement si nécessaire
+  if (typeof XLSX === "undefined") {
+    await loadSheetJS();
+  }
 
-  document.body.appendChild(script);
-  backBtn.style.display="inline-block"
+  const response = await fetch(filePath);
+  const arrayBuffer = await response.arrayBuffer();
+
+  const data = new Uint8Array(arrayBuffer);
+  const workbook = XLSX.read(data, { type: "array" });
+  const sheet = workbook.Sheets[workbook.SheetNames[0]];
+  const json = XLSX.utils.sheet_to_json(sheet);
+
+  questions = json.map(q => ({
+    type: q.Type,
+    question: q.Question,
+    answers: q.Réponses ? q.Réponses.split(",").map(r => r.trim()) : [],
+    correct: parseInt(q.Correcte) - 1,
+    explanation: q.Explication || "",
+    resource: q.Ressource ? `/resources/${q.Ressource}` : null,
+  }));
+
+  questions = shuffleArray(questions);
+  startQuiz();
 }
+
 
 // Compmence le quiz
 function startQuiz()

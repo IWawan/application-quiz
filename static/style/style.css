@@ -454,21 +454,8 @@ button:hover
 
 @media (min-width: 1200px) {
   :root {
-    --font-size-small: 1.5em;
-    --font-size-medium: 2em;
-    --font-size-title: 3.5em;
-  }
-
-  .container {
-    padding: 60px;
-    max-width: 70%;
-  }
-}
-
-@media (min-width: 1200px) {
-  :root {
-    --font-size-small: 1.5em;
-    --font-size-medium: 2.5em;
+    --font-size-small: 1.3em;
+    --font-size-medium: 1.8em;
     --font-size-title: 3.5em;
   }
 
