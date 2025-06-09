@@ -65,11 +65,18 @@
     window.addEventListener("load", () => {
       navigator.serviceWorker.register("/sw.js")
         .then(registration => {
-          console.log("Service Worker enregistré avec succès:", registration);
+          registration.update();
+          if (registration.waiting) {
+            registration.waiting.postMessage({ type: "SKIP_WAITING" });
+          }
         })
         .catch(error => {
-          console.log("Erreur lors de l'enregistrement du Service Worker:", error);
+          console.error("Erreur d'enregistrement SW:", error);
         });
+    });
+  
+    navigator.serviceWorker.addEventListener("controllerchange", () => {
+      window.location.reload();
     });
   }
 </script>
