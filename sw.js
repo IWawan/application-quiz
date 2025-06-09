@@ -1,4 +1,4 @@
-const CACHE_NAME = "quiz-cache-v5";
+const CACHE_NAME = "quiz-cache-v6";
 const urlsToCache = [
   '/',
   '/index.html',
@@ -20,12 +20,12 @@ const urlsToCache = [
 
 // Installation du service worker et mise en cache des ressources
 self.addEventListener("install", event => {
+  self.skipWaiting();
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll(urlsToCache);
-    })
+    caches.open(CACHE_NAME).then(cache => cache.addAll(urlsToCache))
   );
 });
+
 
 // Activation et nettoyage des anciens caches
 self.addEventListener("activate", event => {
@@ -40,6 +40,7 @@ self.addEventListener("activate", event => {
       )
     )
   );
+  self.clients.claim();
 });
 
 // Interception des requêtes réseau
